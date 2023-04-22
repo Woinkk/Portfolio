@@ -1,4 +1,7 @@
 <div class="app-container">
     <app-header></app-header>
+    <div *ngIf="currentRoute.length <= 1" >
+        home works !
+    </div>
     <router-outlet></router-outlet>
 </div>
