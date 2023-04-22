@@ -7,19 +7,27 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { MatButtonModule } from '@angular/material/button';
+import { SkillsModule } from './skills/skills.module';
+import { BlogModule } from './blog/blog.module';
+import { AboutComponent } from './components/about/about.component';
+import { SchoolPathComponent } from './components/school-path/school-path.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutComponent,
+    SchoolPathComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    SkillsModule,
+    BlogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
