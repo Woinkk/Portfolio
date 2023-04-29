@@ -7,6 +7,7 @@ import { NavigationEnd, Router, UrlSegment } from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 
+  progress: number = 0;
   currentRoute: UrlSegment[] = [];
 
   constructor(
@@ -29,6 +30,28 @@ export class HomePageComponent implements OnInit {
         }
       }
     })
+
+    this.download();
+  }
+
+  download() {
+    const totalSize = 100000000; //10000000; // 10 MB
+    const chunkSize = 1000000; // 10 KB
+    const numChunks = totalSize / chunkSize;
+    let currentChunk = 0;
+
+    const simulateDownload = () => {
+      setTimeout(() => {
+        currentChunk++;
+        const progress = Math.round((100 * currentChunk) / numChunks);
+        this.progress = progress;
+        if (currentChunk < numChunks) {
+          simulateDownload();
+        }
+      }, 10);
+    };
+
+    simulateDownload();
   }
 
 }
