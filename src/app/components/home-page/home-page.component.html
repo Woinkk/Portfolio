@@ -16,7 +16,7 @@
                     installing... {{ progress }}%
                 </code>
             </pre>
-            <pre class="prefix" data-prefix="$">
+            <pre class="prefix" data-prefix="$" *ngIf="progress >= 100">
                 <code class="command">
                     resume ready to download!
                 </code>
