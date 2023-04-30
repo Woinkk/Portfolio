@@ -35,8 +35,8 @@ export class HomePageComponent implements OnInit {
   }
 
   download() {
-    const totalSize = 100000000; //10000000; // 10 MB
-    const chunkSize = 1000000; // 10 KB
+    const totalSize = 1000000; //10000000; // 10 MB
+    const chunkSize = 10000; // 10 KB
     const numChunks = totalSize / chunkSize;
     let currentChunk = 0;
 
@@ -48,10 +48,9 @@ export class HomePageComponent implements OnInit {
         if (currentChunk < numChunks) {
           simulateDownload();
         }
-      }, 10);
+      }, 30);
     };
 
     simulateDownload();
   }
-
 }
