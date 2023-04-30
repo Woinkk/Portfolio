@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router, UrlSegment } from '@angular/router';
+import { NavigationService } from 'src/app/shared/service/navigation-service/navigation.service';
 
 @Component({
   templateUrl: './home-page.component.html',
@@ -11,25 +12,16 @@ export class HomePageComponent implements OnInit {
   currentRoute: UrlSegment[] = [];
 
   constructor(
-    private _router: Router
+    private _navigationService: NavigationService
   ) { 
-    let segments = this._router.getCurrentNavigation()?.finalUrl?.root.children['primary'].segments;
-    if(segments) {
-      this.currentRoute = segments;
-      console.log(this.currentRoute.length);
-      
-    }
+    
   };
 
   ngOnInit(): void {
-    this._router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        let segments = this._router.getCurrentNavigation()?.finalUrl?.root.children['primary'].segments;
-        if(segments) {
-          this.currentRoute = segments;
-        }
-      }
-    })
+    this._navigationService.currentRoute$.subscribe((currentRoute) => {
+      this.currentRoute = currentRoute;
+      console.log(this.currentRoute);
+    });
 
     this.download();
   }
