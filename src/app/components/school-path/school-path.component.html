@@ -3,6 +3,17 @@
         Parcours
     </div>
     <div class="section-content">
-        timeline
+        <div class="timeline">
+            <div *ngFor='let entry of timeline; let i = index'>
+              <div class="container" [ngClass]="{ left: i%2!==0, right:i%2==0}">
+                <div class="content">
+                  <h2>{{entry.year}}</h2>
+                  <p>{{entry.details}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="starter">
+          </div>
     </div>
 </div>
