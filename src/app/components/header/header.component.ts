@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, UrlSegment } from '@angular/router';
-import { NavigationService } from 'src/app/shared/service/navigation-service/navigation.service';
+import { NavigationService } from 'src/app/shared/service/navigation.service';
 
 @Component({
   selector: 'app-header',
