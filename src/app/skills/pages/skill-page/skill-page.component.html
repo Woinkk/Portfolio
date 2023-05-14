@@ -1,0 +1,14 @@
+
+<app-header></app-header>
+<div class="skill-container" *ngIf="currentSkill == null" >
+    <div class="skill-container-title">
+        Mes compétences
+    </div>
+    <div class="skill-selection" *ngIf="skillListSelected == null else skillList">
+        <button mat-flat-button (click)="selectSkillPage('hard')">Compétences techniques</button>
+        <button mat-flat-button (click)="selectSkillPage('soft')">Compétences transverses</button> 
+    </div>
+    <ng-template #skillList><app-skill-list class="skill-selection" [skillList]="skillListSelected" (skillSelected)="setSkill($event)" (skillListStatus)="unsetSkillList()"></app-skill-list></ng-template>
+</div>
+<app-article *ngIf="currentSkill != null" [content]="currentSkill" [pageType]="pageType" (blogStatus)="unsetSkill()">
+</app-article>

@@ -1,0 +1,8 @@
+<div class="skill-list-container">
+    <div class="back">
+        <button mat-flat-button (click)="emitUnsetSkill()">Retour</button>
+    </div>
+    <div class="skill-container">
+        <button mat-flat-button *ngFor="let skill of skillList;" (click)="emitSelectedSkill(skill)">{{skill}}</button>
+    </div>
+</div>
