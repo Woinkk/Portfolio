@@ -12,6 +12,8 @@ import { SkillsModule } from './skills/skills.module';
 import { BlogModule } from './blog/blog.module';
 import { AboutComponent } from './components/about/about.component';
 import { SchoolPathComponent } from './components/school-path/school-path.component';
+import { ArticleComponent } from './shared/components/article/article.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { SchoolPathComponent } from './components/school-path/school-path.compon
     HomePageComponent,
     HeaderComponent,
     AboutComponent,
-    SchoolPathComponent
+    SchoolPathComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
@@ -28,8 +31,13 @@ import { SchoolPathComponent } from './components/school-path/school-path.compon
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    SkillsModule,
-    BlogModule
+    HttpClientModule
+  ],
+  exports: [
+    HeaderComponent,
+    ArticleComponent,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
