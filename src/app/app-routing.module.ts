@@ -20,6 +20,14 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'blog', 
+    loadChildren: () => import('./blog/blog-routing.module').then(m => m.BlogRoutingModule)
+  },
+  {
+    path: 'skills', 
+    loadChildren: () => import('./skills/skills-routing.module').then(m => m.SkillsRoutingModule)
+  },
+  {
     path: '**',
     redirectTo: '/home',
     pathMatch: 'full'
