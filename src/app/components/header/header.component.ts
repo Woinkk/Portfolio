@@ -19,8 +19,17 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this._navigationService.currentRoute$.subscribe((currentRoute) => {
+      console.log(currentRoute);
+      
       this.currentRoute = currentRoute;
     })
+  }
+
+  isSelected(path: string): boolean {
+    let currentRouteLength = this.currentRoute.length - 1;
+    let currentPath = this.currentRoute[currentRouteLength].path;
+    if(path == currentPath) return true;
+    else return false;
   }
 
 }
