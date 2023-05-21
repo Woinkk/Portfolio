@@ -10,4 +10,4 @@
         <button mat-flat-button (click)="selectArticle('demat')">Déploiement demat BW</button>
     </div>
 </div>
-<app-article *ngIf="currentArticle != null" [content]="currentArticle" (blogStatus)="unsetArticle()"></app-article>
+<app-article *ngIf="currentArticle != null" [content]="currentArticle" [pageType]="pageType" (blogStatus)="unsetArticle()"></app-article>

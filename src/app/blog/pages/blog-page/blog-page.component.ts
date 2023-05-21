@@ -11,6 +11,8 @@ export class BlogPageComponent implements OnInit {
 
   currentArticle: Article | null = null;
 
+  pageType: string | null = 'réalisations';
+
   constructor(
     private _articleService: ArticleService
   ) { }

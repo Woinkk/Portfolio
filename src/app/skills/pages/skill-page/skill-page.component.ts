@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Article } from 'src/app/shared/models/article.model';
 import { ArticleService } from 'src/app/shared/service/article.service';
 
@@ -7,7 +7,7 @@ import { ArticleService } from 'src/app/shared/service/article.service';
   templateUrl: './skill-page.component.html',
   styleUrls: ['./skill-page.component.less']
 })
-export class SkillPageComponent implements OnInit {
+export class SkillPageComponent implements OnInit, OnDestroy {
 
   currentSkill: Article | null = null;
   skillListSelected: string[] | null = null;
@@ -44,6 +44,10 @@ export class SkillPageComponent implements OnInit {
   }
 
   unsetSkill(): void {
+    this._articleService.unsetSkill();
+  }
+
+  ngOnDestroy(): void {
     this._articleService.unsetSkill();
   }
 
