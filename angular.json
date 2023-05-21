@@ -23,7 +23,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "less",
-            "baseHref": "/woinkk.github.io/",
+            
             "assets": [
               "src/favicon.ico",
               "src/assets/"
