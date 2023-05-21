@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Skill } from 'src/app/shared/models/skill.model';
 
 @Component({
   selector: 'app-skill-list',
@@ -8,7 +9,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class SkillListComponent implements OnInit {
 
   @Input()
-  skillList: string[] | null = null;
+  skillList: Skill[] | null = null;
 
   @Output()
   skillListStatus: EventEmitter<boolean> = new EventEmitter<boolean>(false);
@@ -25,8 +26,8 @@ export class SkillListComponent implements OnInit {
     this.skillListStatus.emit(true);
   }
 
-  emitSelectedSkill(skillName: string): void {
-    this.skillSelected.emit(skillName);
+  emitSelectedSkill(skill: Skill): void {
+    this.skillSelected.emit(skill.folderName);
   }
 
 }

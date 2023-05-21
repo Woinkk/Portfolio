@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Article } from 'src/app/shared/models/article.model';
+import { Skill } from 'src/app/shared/models/skill.model';
 import { ArticleService } from 'src/app/shared/service/article.service';
 
 @Component({
@@ -10,12 +11,12 @@ import { ArticleService } from 'src/app/shared/service/article.service';
 export class SkillPageComponent implements OnInit, OnDestroy {
 
   currentSkill: Article | null = null;
-  skillListSelected: string[] | null = null;
+  skillListSelected: Skill[] | null = null;
 
   pageType: string | null = 'compétences';
 
-  hardSkills: string[] = ["Angular", "CSharp"];
-  softSkills: string[] = ["Flexibilité", "Autonomie", "Esprit d'équipe"];
+  hardSkills: Skill[] = [{name:"Angular", folderName:"Angular"}, {name:"C#", folderName:"CSharp"}, {name:"EF6/SQL Server", folderName:"EF6/SQLServer"}];
+  softSkills: Skill[] = [{name:"Flexibilité", folderName:"Flexibilité"}, {name:"Autonomie", folderName:"Autonomie"}, {name:"Esprit d'équipe", folderName:"Espritdequipe"}];
 
   constructor(
     private _articleService: ArticleService
