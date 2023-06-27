@@ -17,32 +17,32 @@ export class SchoolPathComponent implements OnInit {
     {
       year: '2018',
       title: 'Ecole supérieure d\'ingénierie logicielle',
-      facility: 'Intech',
+      facility: 'INTECH',
       details: ''
     },
     {
       year: '2018 à 2020',
       title: 'Pilote de machine de mise sous pli',
       facility: 'SOCIETE GENERALE',
-      details: 'Détails'
+      details: ''
     },
     {
       year: '2020 à 2021',
       title: 'Stage de fin de bachelor',
       facility: 'Signature Code',
-      details: 'Détails'
+      details: ''
     },
     {
       year: '2021 à 2022',
       title: 'Alternance',
       facility: 'Signature Code',
-      details: 'Détails'
+      details: ''
     },
     {
       year: '2022 à Aujourd\'hui',
       title: 'Alternance',
       facility: 'Vinci Construction SI',
-      details: 'Détails'
+      details: ''
     },
   ];
 

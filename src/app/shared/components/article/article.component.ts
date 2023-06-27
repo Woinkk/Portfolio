@@ -21,6 +21,13 @@ export class ArticleComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     document.getElementById('content')!.innerHTML = this.content.contentHtml;
+
+    let pTags = document.getElementById('content')!.getElementsByTagName('p').length
+
+    for (let i = 0; i < pTags - 1; i++) {
+      const element = document.getElementById('content')!.getElementsByTagName('p').item(i);
+      element!.style.width = "100%";
+    }
   }
 
   ngOnInit(): void {
