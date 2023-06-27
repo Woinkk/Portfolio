@@ -1,0 +1,29 @@
+<div class="section-container">
+    <div class="section-title">
+        Parcours
+    </div>
+    <div class="section-content">
+        <div class="timeline">
+            <div *ngFor='let entry of timeline; let i = index'>
+              <div class="container" [ngClass]="{ left: i%2!==0, right:i%2==0}">
+                <div class="content">
+                  <div class="content-header">
+                    <div class="content-header-title">
+                      <h2>{{entry.facility}}</h2>
+                      <h2 class="separator"> - </h2>
+                      <h2 class="content-header-year">{{entry.year}}</h2>
+                    </div>
+                    <p>{{entry.title}}</p>
+                  </div>
+                  <p>{{entry.details}}</p>
+                </div>
+              </div>
+            </div>
+        </div>
+          <div class="starter">
+            <p class="starter-content">
+              &nbsp;
+            </p>
+          </div>
+    </div>
+</div>

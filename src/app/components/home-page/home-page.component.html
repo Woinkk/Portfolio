@@ -1,13 +1,30 @@
-<div class="main">
-    <div class="header">
-        Header
+<div class="app-container">
+    <app-header></app-header>
+    <div class="home-container" *ngIf="currentRoute.length <= 1" >
+        <div class="description-container">
+            <h1 class="name-title">Galloni Spencer</h1>
+            <h1 class="name-title">Développeur <b class="work-title">fullstack</b></h1>
+        </div>
+        <div class="code">
+            <pre class="prefix" data-prefix="$">
+                <code class="command">
+                    npm install @galloni/spencer
+                </code>
+            </pre>
+            <pre class="prefix" data-prefix="$">
+                <code class="command install-command">
+                    installing... {{ progress }}%
+                </code>
+            </pre>
+            <pre class="prefix" data-prefix="$" *ngIf="progress >= 100">
+                <code class="command">
+                    resume ready to download!
+                </code>
+            </pre>
+        </div>
+        <div class="download-button-container">
+            <button mat-flat-button class="download-button">Téléchargez mon CV</button>
+        </div>
     </div>
-
-    <div [style.backgroundColor]="'brown'">
-        <mat-tab-group mat-align-tabs="center">
-            <mat-tab label="First">Content 1</mat-tab>
-            <mat-tab label="Second">Content 2</mat-tab>
-            <mat-tab label="Third">Content 3</mat-tab>
-        </mat-tab-group> 
-    </div>
+    <router-outlet></router-outlet>
 </div>

@@ -1,0 +1,13 @@
+
+<app-header></app-header>
+<div class="blog-container" *ngIf="currentArticle == null" >
+    <div class="blog-title">
+        Réalisations
+    </div>
+    <div class="blog-selection">
+        <button mat-flat-button (click)="selectArticle('shift')">Shift</button>
+        <button mat-flat-button (click)="selectArticle('kodeLanta')">Kode Lanta</button>
+        <button mat-flat-button (click)="selectArticle('demat')">Déploiement demat BW</button>
+    </div>
+</div>
+<app-article *ngIf="currentArticle != null" [content]="currentArticle" [pageType]="pageType" (blogStatus)="unsetArticle()"></app-article>

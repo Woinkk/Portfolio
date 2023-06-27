@@ -1,0 +1,22 @@
+<div class="header-container">
+    <div class="header-title" routerLink="/home">
+        Galloni Spencer
+    </div>
+    <div class="navbar-container">
+        <div class="about">
+            <button mat-flat-button routerLink="/home/about" [class]="isSelected('about') ? 'selected' : ''">A propos</button>
+        </div>
+        <div class="career">
+            <button mat-flat-button routerLink="/home/career" [class]="isSelected('career') ? 'selected' : ''">Parcours</button>
+        </div>
+        <div class="skills">
+            <button mat-flat-button routerLink="/skills" [class]="isSelected('skills') ? 'selected' : ''">Mes compétences</button>
+        </div>
+        <div class="articles">
+            <button mat-flat-button routerLink="/blog" [class]="isSelected('blog') ? 'selected' : ''">Mes réalisations</button>
+        </div>
+        <div class="articles">
+            <button mat-flat-button routerLink="/home/contact" [class]="isSelected('contact') ? 'selected' : ''">Contact</button>
+        </div>
+    </div>
+</div>

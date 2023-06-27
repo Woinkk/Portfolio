@@ -1,0 +1,47 @@
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: aliceblue;
+    padding: 1%;
+    background-color: #0f1729;
+    color: #b0c2eb;
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar-container > div {
+    padding-left: 1%;
+}
+
+.navbar-container > div > button {
+    color: #b0c2eb;
+    background-color: #182542;
+}
+
+.header-title {
+    font-size: 3vh;
+    padding-top: 10px;
+}
+
+.header-title:hover {
+    cursor: pointer;
+}
+
+.header-container > div {
+    height: 50%;
+}
+
+.selected {
+    background-position: 50% 50% !important;
+    background-size: 0% 0% !important ;
+    background-image: linear-gradient(#3abff8, #3abff8) !important;
+    background-repeat: no-repeat !important;
+    transition: background-size .5s, color .5s, background-color .5s !important;
+    background-color: #3abff8 !important;
+    color: black !important;
+}
