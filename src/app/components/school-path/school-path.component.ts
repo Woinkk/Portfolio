@@ -15,6 +15,12 @@ export class SchoolPathComponent implements OnInit {
       details: 'Spécialité SIN'
     },
     {
+      year: '2018',
+      title: 'Ecole supérieure d\'ingénierie logicielle',
+      facility: 'Intech',
+      details: ''
+    },
+    {
       year: '2018 à 2020',
       title: 'Pilote de machine de mise sous pli',
       facility: 'SOCIETE GENERALE',
