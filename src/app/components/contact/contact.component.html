@@ -6,14 +6,14 @@
         <div class="form">
             <div class="name">
                 <div class="spacing">
-                    <mat-form-field>
+                    <mat-form-field class="name-label">
                         <mat-label>Nom</mat-label>
                         <input matInput [(ngModel)]="firstName">
                     </mat-form-field>
                 </div>
                 <mat-form-field>
-                    <mat-label>Prénom</mat-label>
-                    <input matInput [(ngModel)]="lastName">
+                    <mat-label>Mail</mat-label>
+                    <input matInput [(ngModel)]="mail">
                 </mat-form-field>
             </div>
             <div class="objet">
@@ -29,6 +29,27 @@
                 </mat-form-field>
             </div>
             <button mat-flat-button class="send" (click)="openSnackBar()">Envoyer</button>
+        </div>
+        <div class="social-list">
+            <div class="social" (click)="goToUrl()">
+                <mat-icon svgIcon="linkedin" class="icon pointer"></mat-icon>
+            </div>
+            <div class="social">
+                <mat-icon >
+                    <span class="material-symbols-outlined icon">
+                        mail
+                    </span>
+                </mat-icon>
+                galloni@et.intechinfo.fr
+            </div>
+            <div class="social">
+                <mat-icon >
+                    <span class="material-symbols-outlined icon">
+                        location_on
+                    </span>
+                </mat-icon>
+                Val de marne, France
+            </div>
         </div>
     </div>
 </div>
