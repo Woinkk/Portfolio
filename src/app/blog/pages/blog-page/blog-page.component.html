@@ -7,7 +7,7 @@
     <div class="blog-selection">
         <button mat-flat-button (click)="selectArticle('shift')">Shift</button>
         <button mat-flat-button (click)="selectArticle('kodeLanta')">Kode Lanta</button>
-        <button mat-flat-button (click)="selectArticle('demat')">Déploiement demat BW</button>
+        <button mat-flat-button (click)="selectArticle('demat')">Application de gestion de déploiement</button>
     </div>
 </div>
 <app-article *ngIf="currentArticle != null" [content]="currentArticle" [pageType]="pageType" (blogStatus)="unsetArticle()"></app-article>
